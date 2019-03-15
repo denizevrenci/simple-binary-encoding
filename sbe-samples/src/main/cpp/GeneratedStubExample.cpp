@@ -228,14 +228,14 @@ std::size_t decodeCar(
         separator = ", ";
     }
 
-    OptionalExtras &extras = car.extras();
+    OptionalExtras extras = car.extras();
     std::cout << "\ncar.extras.cruiseControl=" << format(extras.cruiseControl());
     std::cout << "\ncar.extras.sportsPack=" << format(extras.sportsPack());
     std::cout << "\ncar.extras.sunRoof=" << format(extras.sunRoof());
 
     std::cout << "\ncar.discountedModel=" << format(car.discountedModel());
 
-    Engine &engine = car.engine();
+    Engine engine = car.engine();
     std::cout << "\ncar.engine.capacity=" << (int)engine.capacity();
     std::cout << "\ncar.engine.numCylinders=" << (int)engine.numCylinders();
     std::cout << "\ncar.engine.maxRpm=" << (int)engine.maxRpm();

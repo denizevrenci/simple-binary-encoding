@@ -2078,18 +2078,9 @@ public class CppGenerator implements CodeGenerator
         final int offset = token.offset();
 
         sb.append(String.format("\n" +
-            indent + "private:\n" +
-            indent + "    %1$s m_%2$s;\n\n" +
-
-            indent + "public:\n",
-            bitsetName,
-            propertyName));
-
-        sb.append(String.format("\n" +
-            indent + "    %1$s &%2$s()\n" +
+            indent + "    %1$s %2$s()\n" +
             indent + "    {\n" +
-            indent + "        m_%2$s.wrap(m_buffer, m_offset + %3$d, m_actingVersion, m_bufferLength);\n" +
-            indent + "        return m_%2$s;\n" +
+            indent + "        return %1$s(m_buffer, m_offset + %3$d, m_bufferLength, m_actingVersion);\n" +
             indent + "    }\n",
             bitsetName,
             propertyName,
@@ -2114,18 +2105,9 @@ public class CppGenerator implements CodeGenerator
         final StringBuilder sb = new StringBuilder();
 
         sb.append(String.format("\n" +
-            "private:\n" +
-            indent + "    %1$s m_%2$s;\n\n" +
-
-            "public:\n",
-            compositeName,
-            propertyName));
-
-        sb.append(String.format("\n" +
-            indent + "    %1$s &%2$s()\n" +
+            indent + "    %1$s %2$s()\n" +
             indent + "    {\n" +
-            indent + "        m_%2$s.wrap(m_buffer, m_offset + %3$d, m_actingVersion, m_bufferLength);\n" +
-            indent + "        return m_%2$s;\n" +
+            indent + "        return %1$s(m_buffer, m_offset + %3$d, m_bufferLength, m_actingVersion);\n" +
             indent + "    }\n",
             compositeName,
             propertyName,

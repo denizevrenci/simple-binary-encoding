@@ -95,12 +95,12 @@ public:
         tmpChar = car.vehicleCode();
         tmpChar = car.someNumbers();
 
-        OptionalExtras &extras = car.extras();
+        OptionalExtras extras = car.extras();
         tmpBool = extras.cruiseControl();
         tmpBool = extras.sportsPack();
         tmpBool = extras.sunRoof();
 
-        Engine &engine = car.engine();
+        Engine engine = car.engine();
         tmpInt = engine.capacity();
         tmpInt = engine.numCylinders();
         tmpInt = engine.maxRpm();

@@ -164,7 +164,7 @@ public:
         EXPECT_EQ(m_carDecoder.extras().sportsPack(), true);
         EXPECT_EQ(m_carDecoder.extras().sunRoof(), false);
 
-        Engine &engine = m_carDecoder.engine();
+        Engine engine = m_carDecoder.engine();
         EXPECT_EQ(engine.capacity(), 2000);
         EXPECT_EQ(engine.numCylinders(), 4);
         EXPECT_EQ(engine.maxRpm(), 9000);

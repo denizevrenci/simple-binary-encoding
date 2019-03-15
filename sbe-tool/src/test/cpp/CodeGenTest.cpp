@@ -470,7 +470,7 @@ TEST_F(CodeGenTest, shouldbeAbleToEncodeAndDecodeHeaderPlusCarCorrectly)
 
     EXPECT_EQ(m_carDecoder.discountedModel(), Model::C);
 
-    Engine &engine = m_carDecoder.engine();
+    Engine engine = m_carDecoder.engine();
     EXPECT_EQ(engine.capacity(), engineCapacity);
     EXPECT_EQ(engine.numCylinders(), engineNumCylinders);
     EXPECT_EQ(engine.maxRpm(), 9000);
